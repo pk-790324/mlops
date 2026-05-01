@@ -1,0 +1,1 @@
+st='welcome to the mlops course'
