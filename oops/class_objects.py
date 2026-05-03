@@ -18,6 +18,8 @@ class BankAccount:
 obj1=BankAccount('ram',1000)
 obj1.withdraw(5000)
 
+
+
 #constructor(init)
 class Customer:
     def __init__(self,name,account_type): #default constructor
@@ -52,3 +54,21 @@ obj4=Customer.get_name_account_details('pappu-saving')
 
 #Alternative constructor :get_dict_data
 obj5=Customer.get_dict_data({'name':'Hari','account_type':'Saving'})
+
+
+
+# Attributes and methods
+class Bank:
+    bank_name='NIC Asia Bank' #class variable
+    def __init__(self,account_holder):
+        self.account_holder=account_holder #instance variable(unique to each variable)
+    def welcome(self):
+        print(f'welcome {self.account_holder} to {Bank.bank_name}')
+obj6=Bank('Trump') #unique variable
+obj6.welcome()
+obj7=Bank('Obama') #unique variable
+obj7.welcome()
+#change in class variable affects all instances
+Bank.bank_name='Nepal Rastraya Bank'
+obj6.welcome()
+obj7.welcome()
